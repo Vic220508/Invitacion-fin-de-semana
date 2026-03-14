@@ -5,32 +5,46 @@
 <title>Tengo una propuesta</title>
 
 <style>
+
 body{
-font-family: Arial;
-background:#f4f8ff;
+margin:0;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
-margin:0;
+font-family:Arial, sans-serif;
+
+/* fondo bonito */
+background: linear-gradient(135deg,#89f7fe,#66a6ff);
 }
 
+/* tarjeta central */
 .caja{
 background:white;
 padding:40px;
-border-radius:15px;
+border-radius:20px;
 text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-max-width:300px;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+max-width:320px;
+animation: aparecer 1s ease;
+}
+
+h2{
+margin-top:0;
+}
+
+p{
+color:#444;
 }
 
 button{
-margin:10px;
-padding:10px 20px;
+margin-top:15px;
+padding:12px 20px;
 border:none;
-border-radius:8px;
+border-radius:10px;
 font-size:16px;
 cursor:pointer;
+transition:0.3s;
 }
 
 .si{
@@ -38,9 +52,29 @@ background:#4CAF50;
 color:white;
 }
 
-.no{
-background:#ddd;
+.si:hover{
+background:#3f9b43;
 }
+
+.no{
+background:#e0e0e0;
+}
+
+.no:hover{
+background:#cfcfcf;
+}
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
 </style>
 </head>
 
@@ -50,16 +84,15 @@ background:#ddd;
 
 <h2>Tengo una propuesta 👀</h2>
 
-<p>¿Te gustaría ir conmigo a caminar al Parque Bicentenario este fin?</p>
+<p>¿Te gustaría ir conmigo al Parque Bicentenario este fin?</p>
 
-<p>Plan tranquilo: caminar, platicar y algo de comer.</p>
+<p>Plan tranquilo: caminar, platicar y algo de comer 🌿</p>
 
-<button class="si" onclick="alert('Perfecto, entonces planeamos 😊')">Suena bien</button>
+<button class="si" onclick="alert('Perfecto 😊 entonces lo planeamos')">Suena bien</button>
 
 <button class="no" onclick="alert('Bueno, tenía que intentarlo 😅')">Tal vez otro día</button>
 
 </div>
 
 </body>
-
 </html>
