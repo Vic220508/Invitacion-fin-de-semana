@@ -14,8 +14,14 @@ justify-content:center;
 align-items:center;
 font-family:Arial, sans-serif;
 
-/* fondo bonito */
-background-image: url("fondo.jpg");
+/* fondo con tu imagen */
+background:
+linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+url("fondo.jpg");
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 
 /* tarjeta central */
@@ -24,7 +30,7 @@ background:white;
 padding:40px;
 border-radius:20px;
 text-align:center;
-box-shadow:0 15px 40px rgba(0,0,0,0.2);
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
 max-width:320px;
 animation: aparecer 1s ease;
 }
@@ -76,6 +82,7 @@ transform:translateY(0);
 }
 
 </style>
+
 </head>
 
 <body>
@@ -88,9 +95,13 @@ transform:translateY(0);
 
 <p>Plan tranquilo: caminar, platicar y algo de comer 🌿</p>
 
-<button class="si" onclick="alert('Perfecto 😊 entonces lo planeamos')">Suena bien</button>
+<button class="si" onclick="alert('Perfecto 😊 entonces lo planeamos')">
+Suena bien
+</button>
 
-<button class="no" onclick="alert('Bueno, tenía que intentarlo 😅')">Tal vez otro día</button>
+<button class="no" onclick="alert('Bueno, tenía que intentarlo 😅')">
+Tal vez otro día
+</button>
 
 </div>
 
